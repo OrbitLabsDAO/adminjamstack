@@ -49,7 +49,6 @@ if [ "$ACTION" = "github" ]; then
     git push "$ACTION" "$BRANCH"
     echo "Done!"
     exit
-    
 fi
 
 echo "Unknown remote $ACTION"
