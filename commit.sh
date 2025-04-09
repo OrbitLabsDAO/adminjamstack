@@ -27,7 +27,6 @@ if [ "$ACTION" = "origin" ]; then
     read -p "Enter commit message: " COMMITMESSAGE
 
     # Git operations
-    git checkout "$BRANCH"
     git add .
     git commit -m "$COMMITMESSAGE"
     git push "$ACTION" "$BRANCH"
