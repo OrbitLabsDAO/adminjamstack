@@ -1,7 +1,8 @@
 ACTION="${1:-github}" # Default to "build" if no parameter is passed
 BRANCH="${2:}"
 
-
+echo $BRANCH
+echo $ACTION
 if [ "$ACTION" = "origin" ]; then
     echo "Resetting core files and running integrity check"
     node build_integrity.js
