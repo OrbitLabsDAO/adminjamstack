@@ -10,7 +10,7 @@ if [ "$ACTION" = "origin" ]; then
         echo "Doing branch stuff..."
         git checkout -b "$BRANCH"
         git checkout "$BRANCH"
-       
+       exit
     fi
 
     #TODO check that the file does not already exist and delete it if it does.
