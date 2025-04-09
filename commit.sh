@@ -1,5 +1,5 @@
 ACTION="${1:-github}" # Default to "build" if no parameter is passed
-BRANCH="${2:}"
+BRANCH="${2}"
 
 echo $BRANCH
 echo $ACTION
@@ -11,7 +11,6 @@ if [ "$ACTION" = "origin" ]; then
         echo "Doing branch stuff..."
         git checkout -b "$BRANCH"
         git checkout "$BRANCH"
-       exit
     fi
 
     #TODO check that the file does not already exist and delete it if it does.
