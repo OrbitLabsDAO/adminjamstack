@@ -1,5 +1,5 @@
 ACTION="${1:-github}" # Default to "build" if no parameter is passed
-BRANCH="${2:-main}"
+BRANCH="${2:}"
 
 
 if [ "$ACTION" = "origin" ]; then
@@ -31,7 +31,7 @@ if [ "$ACTION" = "origin" ]; then
 
     mv _site/tmp2/_custom ./_custom
     rmdir _site/tmp2 2>/dev/null  # Optional cleanup if empty
-    
+    echo "Done!"
     exit
 fi
 
@@ -40,7 +40,7 @@ fi
 if [ "$ACTION" = "github" ]; then
 
     # Ask for commit message
-    read -p "Enter commit message: " COMMITMESSAGE
+    read -p "Enter commit messages: " COMMITMESSAGE
     echo "Doing the all the git things"
     # Git operations
     git checkout "$BRANCH"
